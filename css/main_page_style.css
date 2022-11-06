@@ -1,0 +1,397 @@
+body {
+    text-align: center;
+    font-size: 260%;
+    font-family: ofont_ru_Whitehall;
+    margin: 0 auto;
+    padding: 0;
+    background: url(/img/stars.jpg) fixed;
+
+    /* display: flex; */
+    /* width: calc(250px + (1500 - 250) * ((100vw - 500px) / (1920 - 500))); */
+    /* overflow: hidden; */
+}
+
+header {
+    margin-left: 94%;
+    margin-top: 45px;
+    position: fixed;
+}
+
+a {
+    color: #ffffff;
+    padding: 0 5px;
+    text-decoration: none;
+    /* letter-spacing: -1px; */
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 400;
+    /* padding: 0 0 10px; */
+}
+
+h4 {
+    font-size: 35px;
+    color: #ffffff;
+}
+
+.modul{
+    background-color: black;
+    border-radius: 20px;
+}
+
+#header {
+    /* width: 360px; */
+    float: left;
+    margin: 0 15px 0 0;
+    padding: 0;
+}
+
+#menu {
+    position: fixed;
+    left: 360px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 18px;
+    background-color: #2D6B9F;
+    /* opacity: .75; */
+    z-index: 10;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin-top: 30px;
+    padding: 0;
+}
+
+#menu ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0 10px 0 10px;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #777;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+#menu ul li a:hover {
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+
+#container {
+    position: absolute;
+    left: 40px;
+    width: 6800px;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    /* Гарнитура шрифта */
+    font-family: ofont_ru_Whitehall;
+    /* Путь к файлу со шрифтом */
+    src: url("/font/ofont_ru_Whitehall.ttf") format("truetype");    
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+#container div img {
+    width: 97%;
+    margin-top: 55px;
+}
+
+.box {  
+    border: 4px solid #222222;
+    width: 390px;
+    height: 650px;
+    float: left;
+    margin: 40px;
+    padding: 5px 30px 30px 30px;
+    transform: translateX(450%);
+    margin-top: 2.5%;
+
+}
+
+
+
+/* Модальное окно */
+/* Контейнер для кнопки, чтобы не прыгал контент, когда она сменит позиционирование */
+.css-modal-details {
+    height: 60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+ 
+/* Кнопка для открытия */
+.css-modal-details summary {
+    display: inline-flex;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto', Тahoma, sans-serif;
+    background: #337AB7;
+    cursor: pointer;
+    border: 2px solid #BFE2FF;
+    overflow: hidden;
+    z-index: 1;    
+}
+.css-modal-details summary:hover,
+.css-modal-details summary:active,
+.css-modal-details summary:focus {
+    color: #FFF;
+}
+.css-modal-details summary:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #2D6B9F;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+.css-modal-details summary:hover:before,
+.css-modal-details summary:active:before,
+.css-modal-details summary:focus:before {
+    transform: translateX(0);
+}
+ 
+/* Кнопка при открытом окне переходит на весь экран */
+.css-modal-details details[open] summary {
+    cursor: default;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+ 
+/* Контейнер, который затемняет страницу */
+.css-modal-details details .cmc {
+    display:flex;
+    align-items:center;
+    justify-content:center;    
+}
+.css-modal-details details[open] .cmc {
+    pointer-events: none;
+    z-index: 4;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: bg 0.5s ease;
+    background: rgba(51, 122, 183, 0.7);
+}
+ 
+/* Модальное окно */
+.css-modal-details details .cmt {
+    font-family: Verdana, sans-serif;  
+    font-size: 16px;
+    padding: 20px;
+    width:80%;
+    max-width: 600px;
+    max-height: 70%;
+    transition: 0.5s;
+    border: 6px solid #BFE2FF;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    overflow: auto;
+}
+.css-modal-details details[open] .cmt {
+    animation: scale 0.5s ease;
+    z-index: 4;
+    pointer-events: auto;
+}
+ 
+/* Декоративная кнопка с крестиком */
+.css-modal-details details[open] .cmc:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 6px solid #BFE2FF;
+    border-radius: 12px;
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    right: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+    background-color: #FFF;
+    background-size: cover;
+    animation: move 0.5s ease;
+}
+ 
+/* Анимации */
+@keyframes scale {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes move {
+    0% {
+        right: -80px;
+    }
+    100% {
+        right: 20px;
+    }
+}
+@keyframes bg {
+    0% {
+        background: rgba(51, 122, 183, 0);
+    }
+    100% {
+        background: rgba(51, 122, 183, 0.7);
+    }
+}
+
+
+/* Боковое меню */
+.side-menu {
+    display: none;
+}    
+@media screen and (min-width: 768px) {    
+    .side-menu *    {
+        box-sizing: border-box;
+    }            
+    .side-menu     {
+        position: fixed;
+        display: block;
+        top: 200px;
+        right: 0;
+        z-index: 9999999;
+    }        
+    .side-menu-buttons {
+        position: absolute;
+        top: 0; 
+        right: -2px;
+        border: 2px solid #BFE2FF;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        box-shadow: 0 4px 4px rgba(0,0,0,0.2), 0 10px 18px rgba(0,0,0,0.2);
+    }
+    .side-menu-item:first-child {
+        border-top-left-radius: 10px;
+    }
+    .side-menu-item:last-child {
+        border-bottom-left-radius: 10px;
+    }
+    .side-menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        width: 74px;
+        height: 74px;
+        position: relative;
+        background-color: #fff;
+    }
+    .side-menu-item:not(:last-child) {
+        border-bottom: 2px solid #BFE2FF;
+    }
+    .side-menu-item i,
+    .side-menu-item span {
+        font-size: 40px;
+        color: #000;
+        transition: color 0.3s;
+    }
+    .side-menu-item img {
+        height: 40px;
+    }
+    .side-menu-item svg {
+        stroke: #000;
+        height: 40px;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 400;    
+        stroke-width: 2;
+        stroke-linecap: round; 
+        stroke-linejoin: round;
+        fill: none;
+        transition: stroke 0.3s;
+    }
+    .side-menu-item:hover i,
+    .side-menu-item:hover span {
+        color: #337AB7;
+    }
+    .side-menu-item:hover svg {
+        stroke: #337AB7;
+    }
+    .side-menu-item.svg-icon-anim:hover svg {
+        stroke: #337AB7;
+        animation: strok 1s reverse;  
+    }
+    @keyframes strok {
+        100% {
+            stroke-dashoffset: 400;
+        }
+    }
+    .side-menu-hover {
+        position: absolute;
+        background-color: #337AB7;
+        color: #FFF;
+        border: 2px solid #BFE2FF;
+        padding: 0 30px;
+        transform: translateX(0);
+        left: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: all 0.2s;
+        z-index: -100;
+        font-size: 16px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .side-menu-item:hover .side-menu-hover {
+        opacity: 1;
+        transform: translateX(-100%);
+    }    
+}
+/* Нельзя выделить на сайте */
+.disable-select {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+  }
+
+
+  .gorizontal{
+    overflow-x: auto;
+  }
