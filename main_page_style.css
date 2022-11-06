@@ -13,7 +13,7 @@ body {
 }
 header{
     margin-left: 94%;
-    margin-top: 25px;    
+    /* margin-top: 25px;     */
     position: fixed;
 }
 
@@ -35,15 +35,15 @@ h2 {
 
 
 #header {
-    width: 360px;
     float: left;
-    margin: 0 15px 0 0;
-    padding: 0;
+    display: block;
+    margin: 40px auto;
+    height: 100%;
+    width: 100px;
 }
 
 #menu {    
     position: fixed;
-    top: 40px;
     left: 360px;    
     font-family: helvetica, sans-serif;
     font-weight: bold;
@@ -89,7 +89,6 @@ h2 {
 
 #container {
     position: absolute;
-    top: 200px;
     left: 40px;
     width: 6800px;
     margin: 0;
@@ -112,7 +111,5 @@ h2 {
     float: left;
     margin: 40px;
     padding: 5px 30px 30px 30px;
-    transform: translateX(450%);
-    margin-top: 2.5%;
-    
+    transform: translateX(450%);   
 }
